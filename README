@@ -1,0 +1,80 @@
+Cerinta 1
+La pornirea aplicatiei, se asteapta primirea comenzii "create fs". La primirea
+acestei comenzi, aplicatia initializeaza sistemul de fisiere, alocand memorie
+capului de lista.
+Aplicatia functioneaza pana primeste comanda "delete fs", moment in care este
+eliberata memoria alocta capului de lista si se iese din aplicatie.
+
+Cerinta 2
+Pentru a adauga un fisier in directorul curent, se foloseste comanda "touch".
+La primirea acestei comenzi, aplicatia aloca memorie pentu fisier. Acesta este
+denumit conform primului argument si se copiaza continutul. Dupa aceea,
+fisierul este asezat in lista de fisiere a directorului curent, in ordine
+lexicografica.
+
+Cerinta 3
+Pentru a se adauga un subdirector in directorul curent, se foloseste comanda
+"mkdir". Se creaza un director, numele fiind dat ca argument comenzii.
+Dupa alocarea memoriei, directorul este asezat in lista de subdirectoare
+in ordine lexicografica.
+
+Cerinta 4
+Pentru a se lista continutul directorului curent, se foloseste comanda "ls".
+Acesta afiseaza continutul directorului, mai intai fisierele, apoi
+directoarele, in ordine lexicografica. Daca directorul curent este gol,
+se va afisa o linie goala.
+
+Cerinta 5
+Pentru a se afisa calea absoluta a directorului curent, se foloseste comanda
+"pwd". Aceasta parcurge sistemul de fisiere, de la directorul curent la
+radacina sistemului, salvand numele tuturor directoarelor prin care trece si
+afiseaza aceasta cale pe un rand nou.
+
+Cerinta 6
+Pentru a se schimba directorul curent, se foloseste comanda "cd".
+Se verifica directorul unde se doreste mutarea. Daca se primeste ca
+argument "..", atunci directorul se va schimba cu cel radacina. Altfel,
+se va cauta in lista de subdirectoare un director al carui nume coincide cu
+sirul dat ca argument. Daca nu exista nicio potrivire, atunci se va afisa un
+mesaj de eroare.
+
+Cerinta 7
+Pentru a se afisa continutul subsistemului, se va folosi comanda "tree".
+La primirea acestei comenzi, se va afisa, incepand cu diectorul curent,
+continutul subsistemului printr-o forma arborescenta. Se va folosi
+o indentare de 4 spatii la fiecare nivel.
+
+Cerinta 8
+Pentru a se sterge un fisier, se va folosi comanda "rm". Aceasta primeste
+ca parametru numele fisierului dorit. Se cauta in lista de fisiere
+a directorului curent. Daca se gaseste fisierul dorit, acesta va fi eliminat
+din lista si memoria alocata acestuia va fi eliberata. Daca fisierul cautat
+nu exista, se va afisa un mesaj de eroare.
+
+Cerinta 9
+Pentru a se sterge un director, se va folosi comanda "rmdir". Aceasta primeste
+ca parametru numele directorului dorit. Se va cauta in lista de subdirectoare
+a directorului curent. Daca nu va fi gasit, se va afisa un mesaj de eroare.
+Daca acesta este gasit, se va incepe procesul de stergere. Se incepe cu
+stergerea fisierelor din acesta. Dupa aceea, se va cauta in lista de
+subdirectoare a acestuia. Procesul se repeta penntru fiecare director pana
+cand nu mai exista niciun subdirector existent, moment in care se sterge
+directorul dorit intial.
+
+Bonus: Cerinta 10
+Daca se doreste cautarea unui fisier cu un anumit continut, se va folosi
+comanda "find". Aceasta primeste ca parametrii adancimea maxima de cautare,
+dimensiunea minima si maxima a fisierului si continutul cautat. Se verifica
+mai intai fisierele din directorul curent. Daca acestea au dimensiunea in
+intervalul dorit si contin informatia cautata, atunci se va afisa numele
+lor pe ecran. Daca nu a fost atinsa adangimea maxima, atunci se va continua
+cautarea si in subdirectoarele existenta. Procesul va continua pana se va
+ajunge la adancimea maxima.
+
+Bibiografie
+1. Intelegere liste generice: GeeksForGeeks
+https://www.geeksforgeeks.org/generic-linked-list-in-c-2/
+2. Aplicabilitatea functiei strtok: GeeksForGeeks
+https://www.geeksforgeeks.org/strtok-strtok_r-functions-c-examples/
+3. Informatii detinute anterior din liceu
+4. Informatii asimilate de la cursuri si laboratoare
